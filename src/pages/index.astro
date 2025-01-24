@@ -1,20 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/layout/Navbar.astro';
-import Hero from '../components/sections/Hero.astro';
-import Features from '../components/sections/Features.astro';
-import Testimonials from '../components/sections/Testimonials.astro';
-import Contact from '../components/sections/Contact.astro';
-import Footer from '../components/sections/Footer.astro';
 ---
 
-<Layout title="Modern Web App">
-  <Navbar />
-  <main>
-    <Hero />
-    <Features />
-    <Testimonials />
-    <Contact />
+<Layout title="Welcome to Our Site">
+  <main class="container mx-auto px-4 py-8">
+    <div class="prose prose-lg mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Welcome to Our Site</h1>
+      <p class="text-lg mb-6">
+        This is a modern web application built using Astro and Tina CMS. You can edit content through the Tina interface.
+      </p>
+      <div class="grid gap-6">
+        <a href="/admin" class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90">
+          Access Admin Panel
+        </a>
+      </div>
+    </div>
   </main>
-  <Footer />
 </Layout>
