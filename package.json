@@ -11,6 +11,7 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
+    "@astrojs/node": "^9.0.2",
     "@astrojs/react": "^4.1.6",
     "@astrojs/tailwind": "^5.1.5",
     "@hookform/resolvers": "^3.9.1",
