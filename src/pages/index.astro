@@ -10,9 +10,12 @@ import Layout from '../layouts/Layout.astro';
         This is a modern web application built using Astro and Tina CMS. You can edit content through the Tina interface.
       </p>
       <div class="grid gap-6">
-        <a href="/admin" class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90">
+        <button 
+          onclick="window.location.href='/admin'"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 border-none cursor-pointer"
+        >
           Access Admin Panel
-        </a>
+        </button>
       </div>
     </div>
   </main>

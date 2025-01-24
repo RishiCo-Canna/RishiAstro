@@ -1,0 +1,58 @@
+chunk-WERSD76P.js?v=27a04d1b:521 Warning: validateDOMNesting(...): <a> cannot appear as a descendant of <a>.
+    at a
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:104:13
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:52:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:33:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:104:13
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:52:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:33:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-NCYYWR4D.js?v=27a04d1b:125:15
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=27a04d1b:748:13
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=27a04d1b:426:13
+    at a
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=27a04d1b:337:18
+    at li
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:104:13
+    at Provider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:28:15)
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=27a04d1b:299:13
+    at ul
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:104:13
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:52:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:33:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:104:13
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:52:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:33:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-NCYYWR4D.js?v=27a04d1b:114:15
+    at Provider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-NCYYWR4D.js?v=27a04d1b:44:15)
+    at CollectionProvider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-NCYYWR4D.js?v=27a04d1b:105:13)
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=27a04d1b:739:13
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:52:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=27a04d1b:33:11
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-NCYYWR4D.js?v=27a04d1b:114:15
+    at div
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:104:13
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=27a04d1b:288:13
+    at _c3 (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/src/components/ui/navigation-menu.tsx:54:12)
+    at nav
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:104:13
+    at Provider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:28:15)
+    at Provider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-NCYYWR4D.js?v=27a04d1b:44:15)
+    at CollectionProvider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-NCYYWR4D.js?v=27a04d1b:105:13)
+    at Provider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-ADOVDXDY.js?v=27a04d1b:28:15)
+    at NavigationMenuProvider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=27a04d1b:230:5)
+    at https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=27a04d1b:86:7
+    at _c (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/src/components/ui/navigation-menu.tsx:23:11)
+    at div
+    at div
+    at header
+    at Navbar
+    at div
+    at Home
+    at Route (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=27a04d1b:323:16)
+    at Switch (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=27a04d1b:379:17)
+    at Router
+    at QueryClientProvider (https://4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=27a04d1b:2805:3)
+    at App
+printWarning @ chunk-WERSD76P.js?v=27a04d1b:521Understand this errorAI
+4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/:1 Unchecked runtime.lastError: The message port closed before a response was received.Understand this errorAI
+4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev/:1 Unchecked runtime.lastError: The message port closed before a response was received.Understand this errorAI
