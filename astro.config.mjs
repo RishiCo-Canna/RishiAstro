@@ -13,5 +13,13 @@ export default defineConfig({
       token: process.env.TINA_TOKEN,
     })
   ],
+  // Configure content directories
+  content: {
+    collections: {
+      posts: {
+        schema: 'src/content/posts/**/*.mdx',
+      }
+    }
+  },
   output: 'static'
 });

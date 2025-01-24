@@ -17,6 +17,7 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
+  // Configure content model
   schema: {
     collections: [
       {
@@ -33,17 +34,17 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-          {
             type: "datetime",
             name: "publishDate",
             label: "Publish Date",
             required: true,
           },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          }
         ],
       },
     ],
