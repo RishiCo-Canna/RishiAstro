@@ -1,0 +1,52 @@
+---
+import { Card } from '@/components/ui/card';
+import { Avatar } from '@/components/ui/avatar';
+
+const testimonials = [
+  {
+    name: "Alice Johnson",
+    role: "Product Designer",
+    content: "This toolkit has revolutionized how I build web applications. The components are beautiful and easy to use.",
+    avatar: "AJ",
+  },
+  {
+    name: "Bob Smith",
+    role: "Developer",
+    content: "The best UI component library I've ever used. It's well-documented and saves me hours of development time.",
+    avatar: "BS",
+  },
+  {
+    name: "Carol Williams",
+    role: "Founder",
+    content: "Our team's productivity has increased significantly since we started using this toolkit.",
+    avatar: "CW",
+  },
+];
+---
+
+<section id="testimonials" class="container px-4 py-24 md:px-6 bg-muted">
+  <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+    <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+      Testimonials
+    </h2>
+    <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+      See what others are saying about our toolkit
+    </p>
+  </div>
+  <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-16">
+    {testimonials.map((testimonial) => (
+      <Card class="bg-background">
+        <div class="p-6">
+          <Avatar>
+            <span>{testimonial.avatar}</span>
+          </Avatar>
+          <p class="mt-4 text-sm text-muted-foreground">{testimonial.content}</p>
+          <div class="mt-4">
+            <p class="text-sm font-medium leading-none">{testimonial.name}</p>
+            <p class="text-sm text-muted-foreground">{testimonial.role}</p>
+          </div>
+        </div>
+      </Card>
+    ))}
+  </div>
+</section>
