@@ -1,0 +1,22 @@
+---
+import { Link } from '@/components/ui/link';
+import { Button } from '@/components/ui/button';
+---
+
+<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container flex h-16 items-center">
+    <div class="mr-4 hidden md:flex">
+      <a href="/" class="mr-6 flex items-center space-x-2">
+        <span class="hidden font-bold sm:inline-block">Company</span>
+      </a>
+      <nav class="flex items-center space-x-6 text-sm font-medium">
+        <a href="#features" class="transition-colors hover:text-foreground/80">Features</a>
+        <a href="#testimonials" class="transition-colors hover:text-foreground/80">Testimonials</a>
+        <a href="#contact" class="transition-colors hover:text-foreground/80">Contact</a>
+      </nav>
+    </div>
+    <div class="flex flex-1 items-center justify-end space-x-4">
+      <Button>Get Started</Button>
+    </div>
+  </div>
+</header>
