@@ -2,21 +2,59 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Our Site">
-  <main class="container mx-auto px-4 py-8">
-    <div class="prose prose-lg mx-auto">
-      <h1 class="text-4xl font-bold mb-4">Welcome to Our Site</h1>
-      <p class="text-lg mb-6">
-        This is a modern web application built using Astro and Tina CMS. You can edit content through the Tina interface.
-      </p>
-      <div class="grid gap-6">
-        <button 
-          onclick="window.location.href='/admin'"
-          class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 border-none cursor-pointer"
-        >
-          Access Admin Panel
-        </button>
+<Layout title="Build Beautiful Websites">
+  <div class="min-h-screen bg-background">
+    <!-- Navigation -->
+    <header class="border-b">
+      <div class="container mx-auto px-4">
+        <nav class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-xl font-bold">Company</a>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="/features" class="text-sm font-medium hover:text-primary">Features</a>
+            <a href="/testimonials" class="text-sm font-medium hover:text-primary">Testimonials</a>
+            <a href="/contact" class="text-sm font-medium hover:text-primary">Contact</a>
+          </div>
+          <div>
+            <button 
+              onclick="window.location.href='/admin'"
+              class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90"
+            >
+              Get Started
+            </button>
+          </div>
+        </nav>
       </div>
-    </div>
-  </main>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+      <div class="container mx-auto px-4 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-6xl font-bold tracking-tight text-foreground mb-6">
+            Build Beautiful Websites<br />
+            Faster Than Ever
+          </h1>
+          <p class="text-xl text-muted-foreground mb-8">
+            A modern UI toolkit for creating stunning web applications. Built with React and Tailwind CSS.
+          </p>
+          <div class="flex items-center justify-center gap-4">
+            <button 
+              onclick="window.location.href='/admin'"
+              class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-base font-medium text-primary-foreground shadow hover:bg-primary/90"
+            >
+              Get Started
+            </button>
+            <button 
+              onclick="window.location.href='/docs'"
+              class="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-base font-medium shadow-sm hover:bg-accent hover:text-accent-foreground"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 </Layout>
