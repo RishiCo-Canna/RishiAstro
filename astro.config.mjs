@@ -3,7 +3,7 @@ import react from "@astrojs/react";
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  output: 'static', // Changed from 'server' to 'static' for static site generation
+  output: 'static', // Static site generation
   integrations: [
     react(),
     mdx(),
@@ -18,18 +18,25 @@ export default defineConfig({
                 'process.env.TINA_TOKEN': JSON.stringify(process.env.TINA_TOKEN),
                 'process.env.TINA_SEARCH_TOKEN': JSON.stringify(process.env.TINA_SEARCH_TOKEN),
               },
+              server: {
+                hmr: {
+                  protocol: 'ws',
+                  host: '0.0.0.0',
+                  port: 3000,
+                  clientPort: 443,
+                },
+                watch: {
+                  usePolling: true
+                }
+              }
             },
           });
         },
       },
     },
   ],
-  vite: {
-    server: {
-      hmr: {
-        clientPort: 5000,
-        port: 5000,
-      },
-    },
+  server: {
+    port: 3000,
+    host: true, // Required for Replit
   },
 });

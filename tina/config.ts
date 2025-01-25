@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
-    basePath: "",
+    basePath: "/admin",
   },
 
   media: {
@@ -32,7 +32,4 @@ export default defineConfig({
       stopwordLanguages: ["eng"],
     },
   },
-
-  // Configure for static site generation
-  contentApiUrlOverride: '/api/tina/gql',
 });
