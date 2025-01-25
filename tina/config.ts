@@ -1,18 +1,24 @@
 import { defineConfig } from "tinacms";
 
 export default defineConfig({
+  // Local-only mode
+  localMode: true,
+
+  // Basic build configuration
   build: {
     outputFolder: "admin",
     publicFolder: "public",
   },
+
+  // Media configuration
   media: {
     tina: {
       mediaRoot: "images",
       publicFolder: "public",
     },
   },
-  // Set to true to enable local mode
-  localMode: true,
+
+  // Content schema
   schema: {
     collections: [
       {
