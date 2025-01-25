@@ -10,7 +10,7 @@ export default defineConfig({
     mode: 'standalone'
   }),
   server: {
-    port: 4322,
+    port: 3000,
     host: '0.0.0.0',
   },
   integrations: [
@@ -28,8 +28,13 @@ export default defineConfig({
               },
               server: {
                 fs: {
-                  allow: ['.'],
+                  strict: false,
+                  allow: ['..'],
                 },
+                hmr: {
+                  protocol: 'ws',
+                  port: 3001
+                }
               },
             },
           });
@@ -37,9 +42,4 @@ export default defineConfig({
       },
     },
   ],
-  vite: {
-    optimizeDeps: {
-      include: ['tinacms'],
-    }
-  },
 });

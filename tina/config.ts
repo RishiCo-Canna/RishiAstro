@@ -1,5 +1,4 @@
 import { defineConfig } from "tinacms";
-import type { TokenObject } from "tinacms/dist/admin/authenticate";
 
 export default defineConfig({
   build: {
@@ -12,30 +11,8 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  // Enable local mode explicitly
-  local: true,
-  // Configure basic auth for local admin
-  admin: {
-    auth: {
-      // Using simple local authentication with proper type
-      onLogin: async ({ token }: { token: TokenObject }) => {
-        // Simple local auth - always allow access
-        return;
-      },
-      logout: async () => {
-        return;
-      },
-      getToken: async () => {
-        return null;
-      },
-      getUser: async () => {
-        return { id: '1', name: 'Admin' };
-      },
-      authorize: async () => {
-        return true;
-      }
-    }
-  },
+  // Set to true to enable local mode
+  localMode: true,
   schema: {
     collections: [
       {
