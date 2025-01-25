@@ -1,1 +1,1 @@
-// This file is being removed as we're using Astro's built-in SSR
+// This file has been removed as we're using static site generation
