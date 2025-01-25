@@ -10,11 +10,11 @@ export default defineConfig({
   }),
   server: {
     port: 5000,
-    host: '0.0.0.0', // Allow connections from external hosts
+    host: '0.0.0.0',
   },
   integrations: [
-    react(), // Required for Tina
-    mdx(), // Add MDX support
+    react(),
+    mdx(),
     {
       name: 'tina-cms',
       hooks: {
@@ -22,6 +22,11 @@ export default defineConfig({
           updateConfig({
             vite: {
               plugins: [],
+              define: {
+                'process.env.TINA_CLIENT_ID': JSON.stringify(process.env.TINA_CLIENT_ID),
+                'process.env.TINA_TOKEN': JSON.stringify(process.env.TINA_TOKEN),
+                'process.env.TINA_SEARCH_TOKEN': JSON.stringify(process.env.TINA_SEARCH_TOKEN),
+              },
             },
           });
         },
@@ -30,14 +35,16 @@ export default defineConfig({
   ],
   vite: {
     server: {
-      allowedHosts: [
-        'localhost',
-        '127.0.0.1',
-        '4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev'
-      ],
-      port: 5000,
-      host: '0.0.0.0',
-      strictPort: true,
+      hmr: {
+        clientPort: 5000,
+        port: 5000,
+      },
+      proxy: {
+        '/api/tina': {
+          target: 'http://localhost:5000',
+          changeOrigin: true,
+        },
+      },
     },
   },
 });
