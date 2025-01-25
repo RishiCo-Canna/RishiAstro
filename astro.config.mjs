@@ -9,7 +9,7 @@ export default defineConfig({
     mode: 'standalone'
   }),
   server: {
-    port: 3000,
+    port: 5000,
     host: '0.0.0.0',
   },
   integrations: [
@@ -36,8 +36,8 @@ export default defineConfig({
   vite: {
     server: {
       hmr: {
-        clientPort: 3000,
-        port: 3000,
+        clientPort: 5000,
+        port: 5000,
       },
       proxy: {
         '/api/tina': {
