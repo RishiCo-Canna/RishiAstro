@@ -1,12 +1,7 @@
 import { defineConfig } from "tinacms";
+import type { TokenObject } from "tinacms/dist/admin/authenticate";
 
-// Your config for Astro-specific Tina setup
 export default defineConfig({
-  // Remove cloud-specific settings
-  clientId: "",
-  token: "",
-
-  // Configure for local-only mode
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -17,8 +12,30 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  // Force local mode
+  // Enable local mode explicitly
   local: true,
+  // Configure basic auth for local admin
+  admin: {
+    auth: {
+      // Using simple local authentication with proper type
+      onLogin: async ({ token }: { token: TokenObject }) => {
+        // Simple local auth - always allow access
+        return;
+      },
+      logout: async () => {
+        return;
+      },
+      getToken: async () => {
+        return null;
+      },
+      getUser: async () => {
+        return { id: '1', name: 'Admin' };
+      },
+      authorize: async () => {
+        return true;
+      }
+    }
+  },
   schema: {
     collections: [
       {
