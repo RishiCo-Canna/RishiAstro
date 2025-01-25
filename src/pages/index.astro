@@ -2,13 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-center mb-8">
-      Welcome to Astro
-    </h1>
-    <p class="text-center text-lg text-gray-600">
-      Get started by editing <code class="font-mono bg-gray-100 rounded px-2">src/pages/index.astro</code>
-    </p>
-  </main>
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Astro</title>
+  </head>
+  <body>
+    <main>
+      <h1>Welcome to Astro with SSR</h1>
+      <p>Edit <code>src/pages/index.astro</code> to get started!</p>
+    </main>
+  </body>
+</html>
