@@ -32,4 +32,10 @@ export default defineConfig({
       stopwordLanguages: ["eng"],
     },
   },
+
+  // Use direct host configuration instead of relying on REPL_SLUG
+  admin: {
+    host: '0.0.0.0',
+    port: 443
+  }
 });

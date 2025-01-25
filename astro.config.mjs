@@ -20,9 +20,9 @@ export default defineConfig({
               },
               server: {
                 hmr: {
-                  protocol: 'ws',
-                  host: '0.0.0.0',
-                  port: 3000,
+                  protocol: 'wss', // Use secure WebSocket
+                  host: '0.0.0.0', // Use 0.0.0.0 to listen on all interfaces
+                  port: 443, // Standard HTTPS port
                   clientPort: 443,
                 },
                 watch: {
@@ -36,7 +36,7 @@ export default defineConfig({
     },
   ],
   server: {
-    port: 3000,
-    host: true, // Required for Replit
+    port: process.env.REPL_SLUG ? 443 : 3000,
+    host: '0.0.0.0', // Use 0.0.0.0 for better compatibility
   },
 });
