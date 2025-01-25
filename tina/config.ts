@@ -1,43 +1,34 @@
 import { defineConfig } from "tinacms";
+import schema from "./schema";
 
-// Your config for Astro-specific Tina setup
 export default defineConfig({
   branch: process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main",
   clientId: process.env.TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
+
   build: {
     outputFolder: "admin",
     publicFolder: "public",
   },
+
   media: {
     tina: {
-      mediaRoot: "images",
+      mediaRoot: "public/images",
       publicFolder: "public",
     },
   },
-  schema: {
-    collections: [
-      {
-        name: "post",
-        label: "Posts",
-        path: "src/content/posts",
-        format: "mdx",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-      },
-    ],
+
+  // Use the schema we defined
+  schema,
+
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_SEARCH_TOKEN,
+      stopwordLanguages: ["eng"],
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100,
   },
+
+  contentApiUrlOverride: "/api/tina/gql",
 });

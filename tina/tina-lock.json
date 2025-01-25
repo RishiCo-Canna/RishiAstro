@@ -1,0 +1,86 @@
+{
+  "schema": {
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "patch": 0
+    },
+    "meta": {},
+    "collections": [
+      {
+        "name": "post",
+        "label": "Blog Posts",
+        "path": "src/content/posts",
+        "format": "mdx",
+        "fields": [
+          {
+            "type": "string",
+            "name": "title",
+            "label": "Title",
+            "isTitle": true,
+            "required": true
+          },
+          {
+            "type": "datetime",
+            "name": "publishDate",
+            "label": "Publish Date",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "name": "draft",
+            "label": "Draft",
+            "required": true
+          },
+          {
+            "type": "rich-text",
+            "name": "body",
+            "label": "Body",
+            "isBody": true,
+            "templates": [
+              {
+                "name": "CalloutBox",
+                "label": "Callout Box",
+                "fields": [
+                  {
+                    "name": "type",
+                    "label": "Type",
+                    "type": "string",
+                    "options": ["info", "warning", "error"]
+                  },
+                  {
+                    "name": "text",
+                    "label": "Text",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "settings",
+        "label": "Global Settings",
+        "path": "src/content/settings",
+        "format": "json",
+        "fields": [
+          {
+            "type": "string",
+            "name": "title",
+            "label": "Site Title",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "description",
+            "label": "Site Description",
+            "ui": {
+              "component": "textarea"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
