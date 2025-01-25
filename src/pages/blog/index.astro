@@ -1,19 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
 
+// Get all blog posts, excluding drafts in production
 const posts = await getCollection('posts', ({ data }) => {
   return import.meta.env.DEV || !data.draft;
 });
 
-// Render each post's content
+// Pre-render the content for each post
 const renderedPosts = await Promise.all(
   posts.map(async (post) => {
     const { Content } = await post.render();
-    return { ...post, Content };
+    return {
+      ...post,
+      Content,
+    };
   })
 );
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -22,20 +27,20 @@ const renderedPosts = await Promise.all(
   </head>
   <body class="max-w-prose mx-auto px-4 py-8">
     <h1 class="text-4xl font-bold mb-8">Blog Posts</h1>
-    <ul class="space-y-4">
+    <div class="space-y-8">
       {renderedPosts.map(({ data, Content }) => (
-        <li class="border rounded-lg p-4">
+        <article class="prose prose-slate max-w-none">
           <h2 class="text-2xl font-semibold mb-2">{data.title}</h2>
           {data.publishDate && (
-            <p class="text-gray-600 mb-2">
-              {data.publishDate.toLocaleDateString()}
-            </p>
+            <time datetime={data.publishDate.toISOString()} class="text-gray-600 mb-4 block">
+              {new Date(data.publishDate).toLocaleDateString()}
+            </time>
           )}
-          <div class="prose">
+          <div class="mt-4">
             <Content />
           </div>
-        </li>
+        </article>
       ))}
-    </ul>
+    </div>
   </body>
 </html>
