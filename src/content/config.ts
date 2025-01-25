@@ -5,8 +5,8 @@ export const collections = {
     type: 'content',
     schema: z.object({
       title: z.string(),
-      publishDate: z.date().optional(),
-      draft: z.boolean().optional(),
+      publishDate: z.date(),
+      draft: z.boolean().default(false),
     }),
   }),
 };

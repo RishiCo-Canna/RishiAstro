@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
 import react from "@astrojs/react";
+import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   output: 'server',
@@ -13,6 +14,7 @@ export default defineConfig({
   },
   integrations: [
     react(), // Required for Tina
+    mdx(), // Add MDX support
     {
       name: 'tina-cms',
       hooks: {
