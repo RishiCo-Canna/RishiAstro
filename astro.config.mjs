@@ -10,6 +10,20 @@ export default defineConfig({
     port: 5000,
     host: '0.0.0.0', // Allow connections from external hosts
   },
+  integrations: [
+    {
+      name: 'tina-cms',
+      hooks: {
+        'astro:config:setup': ({ updateConfig }) => {
+          updateConfig({
+            vite: {
+              plugins: [],
+            },
+          });
+        },
+      },
+    },
+  ],
   vite: {
     server: {
       allowedHosts: [
