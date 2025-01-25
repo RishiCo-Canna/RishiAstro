@@ -1,10 +1,17 @@
 import { defineConfig } from "tinacms";
 import schema from "./schema";
 
+// Get the current branch from environment variables
+// This ensures Tina Cloud uses the correct branch during deployment
+const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+
 export default defineConfig({
-  branch: process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main",
-  clientId: process.env.TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN || "",
+  // Branch configuration for Tina Cloud
+  branch,
+
+  // Authentication credentials
+  clientId: process.env.TINA_CLIENT_ID || "", // Get from app.tina.io
+  token: process.env.TINA_TOKEN || "", // Get from app.tina.io
 
   build: {
     outputFolder: "admin",
@@ -18,7 +25,7 @@ export default defineConfig({
     },
   },
 
-  // Use the schema we defined
+  // Use the schema defined in schema.ts
   schema,
 
   search: {
@@ -30,5 +37,6 @@ export default defineConfig({
     maxSearchIndexFieldLength: 100,
   },
 
+  // API endpoint configuration
   contentApiUrlOverride: "/api/tina/gql",
 });
