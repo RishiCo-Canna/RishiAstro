@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
 import react from "@astrojs/react";
 import mdx from '@astrojs/mdx';
-import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   output: 'server',
@@ -10,36 +9,35 @@ export default defineConfig({
     mode: 'standalone'
   }),
   server: {
-    port: 3000,
-    host: '0.0.0.0',
+    port: 5000,
+    host: '0.0.0.0', // Allow connections from external hosts
   },
   integrations: [
-    react(), 
-    mdx(),
-    tailwind(),
+    react(), // Required for Tina
+    mdx(), // Add MDX support
     {
       name: 'tina-cms',
       hooks: {
         'astro:config:setup': ({ updateConfig }) => {
           updateConfig({
             vite: {
-              optimizeDeps: {
-                include: ['tinacms'],
-              },
-              server: {
-                fs: {
-                  strict: false,
-                  allow: ['..'],
-                },
-                hmr: {
-                  protocol: 'ws',
-                  port: 3001
-                }
-              },
+              plugins: [],
             },
           });
         },
       },
     },
   ],
+  vite: {
+    server: {
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        '4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev'
+      ],
+      port: 5000,
+      host: '0.0.0.0',
+      strictPort: true,
+    },
+  },
 });

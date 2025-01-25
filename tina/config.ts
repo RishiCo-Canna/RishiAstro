@@ -1,24 +1,20 @@
 import { defineConfig } from "tinacms";
 
+// Your config for Astro-specific Tina setup
 export default defineConfig({
-  // Local-only mode
-  localMode: true,
-
-  // Basic build configuration
+  branch: process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main",
+  clientId: process.env.TINA_CLIENT_ID || "",
+  token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
     publicFolder: "public",
   },
-
-  // Media configuration
   media: {
     tina: {
       mediaRoot: "images",
       publicFolder: "public",
     },
   },
-
-  // Content schema
   schema: {
     collections: [
       {
@@ -32,18 +28,6 @@ export default defineConfig({
             name: "title",
             label: "Title",
             isTitle: true,
-            required: true,
-          },
-          {
-            type: "datetime",
-            name: "publishDate",
-            label: "Publish Date",
-            required: true,
-          },
-          {
-            type: "boolean",
-            name: "draft",
-            label: "Draft",
             required: true,
           },
           {

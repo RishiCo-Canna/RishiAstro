@@ -1,5 +1,5 @@
 ---
-import { TinaAdmin } from "tinacms/admin";
+import { TinaAdmin } from "tinacms/dist/admin";
 ---
 
 <!DOCTYPE html>
@@ -7,11 +7,9 @@ import { TinaAdmin } from "tinacms/admin";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tina Admin</title>
+    <title>Admin</title>
   </head>
   <body>
-    <div id="admin">
-      <TinaAdmin client:only="react" />
-    </div>
+    <TinaAdmin client:only="react" />
   </body>
 </html>

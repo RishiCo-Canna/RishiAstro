@@ -7,7 +7,6 @@ export const collections = {
       title: z.string(),
       publishDate: z.date(),
       draft: z.boolean().default(false),
-      body: z.string(),
     }),
   }),
 };
