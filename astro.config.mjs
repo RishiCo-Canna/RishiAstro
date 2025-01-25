@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
+import react from "@astrojs/react";
 
 export default defineConfig({
   output: 'server',
@@ -11,6 +12,7 @@ export default defineConfig({
     host: '0.0.0.0', // Allow connections from external hosts
   },
   integrations: [
+    react(), // Required for Tina
     {
       name: 'tina-cms',
       hooks: {
@@ -29,7 +31,6 @@ export default defineConfig({
       allowedHosts: [
         'localhost',
         '127.0.0.1',
-        // Update with current replit domain
         '4cfdb5e0-48f2-4114-a872-9ce4be5cf34f-00-3u06s2weisy18.picard.replit.dev'
       ],
       port: 5000,
