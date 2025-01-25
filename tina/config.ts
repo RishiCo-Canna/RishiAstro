@@ -26,15 +26,12 @@ export default defineConfig({
 
   schema,
 
-  // Enhanced search configuration
+  // Search configuration with only valid properties
   search: {
     tina: {
       indexerToken: process.env.TINA_SEARCH_TOKEN,
       stopwordLanguages: ["eng"],
-      indexBatchSize: 100, // Optimize batch size for better indexing
     },
-    indexBatchSize: 100,
-    maxSearchIndexFieldLength: 100,
   },
 
   // Local API configuration for development
