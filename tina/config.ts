@@ -28,6 +28,7 @@ export default defineConfig({
   // Use the schema defined in schema.ts
   schema,
 
+  // Enhanced search configuration
   search: {
     tina: {
       indexerToken: process.env.TINA_SEARCH_TOKEN,
