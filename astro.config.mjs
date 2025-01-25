@@ -14,8 +14,8 @@ export default defineConfig({
     host: '0.0.0.0',
   },
   integrations: [
-    react(), // Required for Tina
-    mdx(), // Add MDX support
+    react(), 
+    mdx(),
     tailwind(),
     {
       name: 'tina-cms',
@@ -23,10 +23,17 @@ export default defineConfig({
         'astro:config:setup': ({ updateConfig }) => {
           updateConfig({
             vite: {
-              plugins: [],
               define: {
                 'process.env.TINA_CLIENT_ID': JSON.stringify(process.env.TINA_CLIENT_ID),
                 'process.env.TINA_TOKEN': JSON.stringify(process.env.TINA_TOKEN),
+              },
+              optimizeDeps: {
+                include: ['tinacms'],
+              },
+              server: {
+                fs: {
+                  strict: false,
+                },
               },
             },
           });
@@ -36,12 +43,13 @@ export default defineConfig({
   ],
   vite: {
     server: {
-      fs: {
-        strict: false,
-      },
       hmr: {
         clientPort: 5000,
+        port: 5000,
       },
     },
+    optimizeDeps: {
+      include: ['tinacms'],
+    }
   },
 });
