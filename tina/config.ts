@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
-    basePath: "", // Ensure correct path resolution
+    basePath: "",
   },
 
   media: {
@@ -26,7 +26,6 @@ export default defineConfig({
 
   schema,
 
-  // Search configuration with only valid properties
   search: {
     tina: {
       indexerToken: process.env.TINA_SEARCH_TOKEN,
@@ -34,13 +33,6 @@ export default defineConfig({
     },
   },
 
-  // Local API configuration for development
-  localContentApiHost: process.env.NODE_ENV === 'development' 
-    ? 'http://localhost:5000' 
-    : undefined,
-
-  // API endpoint configuration
-  contentApiUrlOverride: process.env.NODE_ENV === 'development'
-    ? '/api/tina/gql'
-    : undefined,
+  // Configure for static site generation
+  contentApiUrlOverride: '/api/tina/gql',
 });
