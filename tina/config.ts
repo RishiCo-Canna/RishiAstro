@@ -2,9 +2,11 @@ import { defineConfig } from "tinacms";
 
 // Your config for Astro-specific Tina setup
 export default defineConfig({
-  branch: process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main",
-  clientId: process.env.TINA_CLIENT_ID!,
-  token: process.env.TINA_TOKEN!,
+  // Remove cloud-specific settings
+  clientId: "",
+  token: "",
+
+  // Configure for local-only mode
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -15,7 +17,7 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  // Enable local development mode
+  // Force local mode
   local: true,
   schema: {
     collections: [
@@ -43,7 +45,6 @@ export default defineConfig({
             name: "draft",
             label: "Draft",
             required: true,
-            defaultValue: false,
           },
           {
             type: "rich-text",

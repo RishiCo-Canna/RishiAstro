@@ -10,7 +10,7 @@ export default defineConfig({
     mode: 'standalone'
   }),
   server: {
-    port: 5000,
+    port: 4321,
     host: '0.0.0.0',
   },
   integrations: [
@@ -23,10 +23,6 @@ export default defineConfig({
         'astro:config:setup': ({ updateConfig }) => {
           updateConfig({
             vite: {
-              define: {
-                'process.env.TINA_CLIENT_ID': JSON.stringify(process.env.TINA_CLIENT_ID),
-                'process.env.TINA_TOKEN': JSON.stringify(process.env.TINA_TOKEN),
-              },
               optimizeDeps: {
                 include: ['tinacms'],
               },
@@ -44,8 +40,8 @@ export default defineConfig({
   vite: {
     server: {
       hmr: {
-        clientPort: 5000,
-        port: 5000,
+        clientPort: 4321,
+        port: 4321,
       },
     },
     optimizeDeps: {
