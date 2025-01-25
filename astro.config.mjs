@@ -13,6 +13,8 @@ export default defineConfig({
     port: 4321,
     host: '0.0.0.0',
   },
+  base: '/',
+  trailingSlash: 'never',
   integrations: [
     react(), 
     mdx(),
