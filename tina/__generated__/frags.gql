@@ -1,0 +1,13 @@
+fragment PostParts on Post {
+  __typename
+  title
+  publishDate
+  draft
+  body
+}
+
+fragment SettingsParts on Settings {
+  __typename
+  title
+  description
+}

@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
-    basePath: "", // Ensure correct path resolution
+    basePath: "",
   },
 
   media: {
@@ -26,24 +26,22 @@ export default defineConfig({
 
   schema,
 
-  // Enhanced search configuration
+  // Search configuration
   search: {
     tina: {
       indexerToken: process.env.TINA_SEARCH_TOKEN,
-      stopwordLanguages: ["eng"],
-      indexBatchSize: 100, // Optimize batch size for better indexing
+      stopwordLanguages: ["eng"]
     },
-    indexBatchSize: 100,
-    maxSearchIndexFieldLength: 100,
+    maxSearchIndexFieldLength: 100
   },
 
-  // Local API configuration for development
-  localContentApiHost: process.env.NODE_ENV === 'development' 
-    ? 'http://localhost:5000' 
-    : undefined,
+  // Local API configuration
+  contentApiUrlOverride: "/api/tina/gql",
 
-  // API endpoint configuration
-  contentApiUrlOverride: process.env.NODE_ENV === 'development'
-    ? '/api/tina/gql'
-    : undefined,
+  // Configure datalayer port to avoid conflicts
+  admin: {
+    dataLayer: {
+      port: 5001
+    }
+  }
 });

@@ -9,7 +9,7 @@ export default defineConfig({
     mode: 'standalone'
   }),
   server: {
-    port: 5000,
+    port: 3000,
     host: '0.0.0.0',
   },
   integrations: [
@@ -36,12 +36,17 @@ export default defineConfig({
   vite: {
     server: {
       hmr: {
-        clientPort: 5000,
-        port: 5000,
+        clientPort: 3000,
+        port: 3000,
       },
       proxy: {
         '/api/tina': {
-          target: 'http://localhost:5000',
+          target: 'http://localhost:5001',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api\/tina/, ''),
+        },
+        '/admin': {
+          target: 'http://localhost:5001',
           changeOrigin: true,
         },
       },
